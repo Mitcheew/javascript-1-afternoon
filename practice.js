@@ -39,14 +39,12 @@ let groceries = ["apples", "milk", "eggs", "bread"];
 //doubleCheck should return the array.
 
 //Code Here
-function doubleCheck(groceries) {
-  for(let i = 0; i < groceries.length; i++){
-    if(groceries[i] == "chocolate"){
-      return groceries;
-    }
+function doubleCheck(array) {
+  let index = array.indexOf('chocolate');
+  if(index === -1){
+    array.push('chocolate');
   }
-  groceries.push("chocolate");
-  return groceries;
+  return array;
 };
 //////////////////PROBLEM 5////////////////////
 
@@ -90,9 +88,9 @@ let ruff = dog.bark();
 //Code Here
 function looper(arr){
   let mySum = 0;
-  arr.forEach(element => {
-    if(element % 2 != 0 || element >= 100){
-      mySum += element;
+  arr.forEach(num => {
+    if(num % 2 != 0 || num >= 100){
+      mySum += num;
     }
   });
   return mySum;
